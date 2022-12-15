@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-3</title>
+    <script src="./index.js"></script>
+  </head>
+  <body onload="napuniBody()">
+    <form>
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" /><br /><br />
+      <input type="submit" value="Submit" onclick="pozdravi(event)" />
+    </form>
+    <p id="pozdrav"></p>
+    <hr />
+    <!-- ZAMENI REČ -->
+    <form>
+      <label for="originalnaRecenica">Originalna recenica:</label><br />
+      <textarea id="originalnaRecenica" name="originalnaRecenica"></textarea
+      ><br />
+      <label for="searchTerm">Sto menjas?</label><br />
+      <input type="text" id="searchTerm" name="searchTerm" /><br />
+      <label for="replaceTerm">Sto zelis da bude umesto navedene reci?</label
+      ><br />
+      <input type="text" id="replaceTerm" name="replaceTerm" /><br /><br />
+      <input
+        type="submit"
+        value="Zamena peske"
+        onclick="zameni(event, 'peske')"
+      />
+      <input
+        type="submit"
+        value="Lepa zamena"
+        onclick="zameni(event, 'lepo')"
+      />
+    </form>
+    <p id="zamenjen"></p>
+  </body>
+</html>
